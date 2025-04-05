@@ -1,0 +1,26 @@
+services:
+  db-go:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: go12345
+      MYSQL_DATABASE: go
+      MYSQL_USER: go
+      MYSQL_PASSWORD: go12345
+    ports:
+      - 3306:3306
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  db-spring:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: spring12345
+      MYSQL_DATABASE: spring_cloud
+    ports:
+      - 3307:3306
+    volumes:
+      - db_spring_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
+  db_spring_data:
