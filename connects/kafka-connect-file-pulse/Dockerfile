@@ -44,4 +44,4 @@ USER 1001
 # INFORMACIÓN DE LA IMAGEN
 # ==================================================
 # Para verificar los plugins instalados, ejecutar:
-# ls -la /opt/kafka/plugins/filepulse/
+RUN ls -la /opt/kafka/plugins/filepulse/
