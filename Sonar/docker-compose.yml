@@ -16,6 +16,8 @@ services:
       - sonarqube_extensions:/opt/sonarqube/extensions
       - sonarqube_logs:/opt/sonarqube/logs
       - sonarqube_temp:/opt/sonarqube/temp
+    tmpfs:
+      - /tmp
     ports:
       - "9000:9000"
       
